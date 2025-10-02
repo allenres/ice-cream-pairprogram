@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="icon" type="image" href="images/ice-cream.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Ice Cream Form</title>
+</head>
+<body>
+    <main>
+    <h1>Ice Cream Order Form</h1>
+    <form action="#">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name: <br><input type="text" id="name"></label>
+            <label for="email">Email: <br><input type="text" id="email"></label>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Order Details</legend>
+            <Label id="flavor">Choose your flavor: <br><select><option value="vanilla">Vanilla</option><option value="chocolate">Chocolate</option></select></Label>
+            <label>Choose your cone: <br>
+                <label for="waffle"><input type="radio" name="cone" id="waffle">Waffle Cone</label>
+                <label for="cone"><input type="radio" name="cone" id="cone"> Sugar Cone</label>
+                <label for="cup"><input type="radio" name="cone" id="cup"> Cup</label>
+            </label>
+                <label>Toppings: <br>
+                <label for="1"><input type="checkbox" name="Sprinkles" id="1"> Sprinkles</label>
+                <label for="2"><input type="checkbox" name="nuts" id="2"> Nuts</label>
+                <label for="3"><input type="checkbox" name="cherry" id="3"> Cherry</label>
+                <label for="4"><input type="checkbox" name="whipped cream" id="4"> Whipped Cream</label>
+            </label>
+
+            <label for="comments">Additional Comments:</label><textarea name="comments" id="comments"></textarea>
+        </fieldset>
+
+        <button type="submit">Submit Order</button>
+    </form>
+    </main>
+</body>
+</html>

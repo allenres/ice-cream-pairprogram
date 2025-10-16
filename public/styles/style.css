@@ -1,3 +1,7 @@
+.error{
+    color: red;
+    display: none;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: lightblue;

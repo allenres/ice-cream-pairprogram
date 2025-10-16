@@ -1,5 +1,5 @@
 document.getElementById("form").onsubmit = () => {
-    //clearErrors();
+    clearErrors();
     let isValid = true;
 
     let name = document.getElementById("name").value.trim();

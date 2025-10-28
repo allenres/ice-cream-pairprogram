@@ -10,8 +10,19 @@
 </head>
 <body>
     <main>
-    <h1>Confirmation</h1>
+        <h1>Thank you for your order!</h1>
+        <h3>PERSONAL INFORMATION</h3>
+        <p>Name: <%= order.name %></p>
+        <p>Email: <%= order.email %></p>
+        <h3>ORDER DETAILS</h3>
+        <p>Flavor: <%= order.flavor %></p>
+        <p>Cone Type: <%= order.cone %></p>
+        <p>Toppings: <%= order.toppings[] %></p>
+        <h3>ADDITIONAL COMMENTS</h3>
+        <p>Extra chocolate sauce please</p>
 
+        <button id="print-button">Print Order</button>
+        <button id="place-another-button">Place Another Order</button>
     </main>
 </body>
 </html>

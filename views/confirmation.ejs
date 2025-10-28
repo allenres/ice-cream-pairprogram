@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/ice-cream.png">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/confirm.css">
     <script src="js/ice-cream.js" defer></script>
     <title>Ice Cream Order Form</title>
 </head>
 <body>
     <main>
-        <img src="images/Eo_circle_green_checkmark.svg.png" alt="green checkmark" width="10%">
-        <h1>Thank you for your order!</h1>
+        <img src="images/Eo_circle_green_checkmark.svg.png" alt="green checkmark">
+        <h1>Thank You for Your Order!</h1>
+        <p id="confirm-text">Your ice cream order has been confirmed.</p>
         <h3>PERSONAL INFORMATION</h3>
         <p>Name: <%= order.name %></p>
         <p>Email: <%= order.email %></p>

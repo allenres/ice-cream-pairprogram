@@ -20,6 +20,8 @@ app.post('/submit-form', (req, res) => {
 
     orders.push(order);
     console.log(orders);
+
+    res.render('confirmation', {order});
 })
 
 app.listen(PORT, () => {

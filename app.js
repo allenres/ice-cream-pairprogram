@@ -10,7 +10,16 @@ app.use(express.urlencoded({extended: true}));
 const PORT = 3001;
 
 app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+    res.render('home');
+})
+
+app.post('/submit-form', (req, res) => {
+    const orders = [];
+
+    const order = req.body;
+
+    orders.push(order);
+    console.log(orders);
 })
 
 app.listen(PORT, () => {

@@ -16,7 +16,15 @@ app.get('/', (req, res) => {
 app.post('/submit-form', (req, res) => {
     const orders = [];
 
-    const order = req.body;
+    const order = {
+        name: req.body.name,
+        email: req.body.email,
+        flavor: req.body.flavor,
+        cone: req.body.cone,
+        toppings: req.body.toppings,
+        comments: req.body.comments,
+        timestamp: new Date()
+    };
 
     orders.push(order);
     console.log(orders);

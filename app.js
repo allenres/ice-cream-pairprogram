@@ -7,15 +7,19 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
+const orders = [];
+
 const PORT = 3001;
 
 app.get('/', (req, res) => {
     res.render('home');
 })
 
-app.post('/submit-form', (req, res) => {
-    const orders = [];
+app.get('/admin', (req, res) => {
+    res.render('admin', { orders });
+})
 
+app.post('/submit-form', (req, res) => {
     const order = {
         name: req.body.name,
         email: req.body.email,

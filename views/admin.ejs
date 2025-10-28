@@ -25,23 +25,23 @@
         <table id="order-table" class="display">
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Customer</th>
                     <th>Email</th>
                     <th>Flavor</th>
                     <th>Cone</th>
                     <th>Toppings</th>
-                    <th>Comment</th>
                 </tr>
             </thead>
             <tbody>
                 <% orders.forEach(order => { %>
                 <tr>
+                    <td><%= order.timestamp.toLocaleString() %></td>
                     <td><%= order.name %></td>
                     <td><%= order.email %></td>
                     <td><%= order.flavor %></td>
                     <td><%= order.cone %></td>
                     <td><%= order.toppings %></td>
-                    <td><%= order.timestamp.toLocaleString() %></td>
                 </tr>
                 <% }); %>
             </tbody>

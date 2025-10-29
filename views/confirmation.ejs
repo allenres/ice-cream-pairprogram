@@ -10,21 +10,27 @@
 </head>
 <body>
     <main>
-        <img src="images/Eo_circle_green_checkmark.svg.png" alt="green checkmark">
+        <img src="images/Eo_circle_green_checkmark.png" alt="green checkmark">
         <h1>Thank You for Your Order!</h1>
         <p id="confirm-text">Your ice cream order has been confirmed.</p>
-        <h3>PERSONAL INFORMATION</h3>
-        <p>Name: <%= order.name %></p>
-        <p>Email: <%= order.email %></p>
-        <h3>ORDER DETAILS</h3>
-        <p>Flavor: <%= order.flavor %></p>
-        <p>Cone Type: <%= order.cone %></p>
-        <p>Toppings: <%= order.toppings %></p>
-        <h3>ADDITIONAL COMMENTS</h3>
-        <p><%= order.comments %></p>
-
-        <button id="print-button">Print Order</button>
-        <button id="place-another-button">Place Another Order</button>
+        <div id="order-details">
+            <h4>PERSONAL INFORMATION</h4>
+            <p>Name: </p><span><%= order.name %></span>
+            <br>
+            <p>Email: </p><span><%= order.email %></span>
+            <h4>ORDER DETAILS</h4>
+            <p>Flavor: </p><span><%= order.flavor %></span>
+            <br>
+            <p>Cone Type: </p><span><%= order.cone %></span>
+            <br>
+            <p>Toppings: </p><span><%= order.toppings %></span>
+            <h4>ADDITIONAL COMMENTS</h4>
+            <p id="additional-comments"><%= order.comments %></p>
+        </div>
+        <div class="button-container">
+            <a id="print-button" href="#">Print Order</a>
+            <a id="place-another-button" href="/">Place Another Order</a>
+        </div>
     </main>
 </body>
 </html>

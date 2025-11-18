@@ -62,7 +62,31 @@ app.post('/submit-form', (req, res) => {
 
     res.render('confirmation', {order});
 });
+app.post('confirm', async (req, res) => {
+    try {
+        const order = req.body;
+        console.log('New order submitted:', order);
+        order.toppings = Array.isArray(order.toppings) ?
+        order.toppings.join(", ") : "";
+        const sql =
+            `INSERT INTO orders(customer, email, flavor, cone, toppings)
+            VALUES (?, ?, ?, ?, ?);`;
+        const params = [
+            order.customer;
+            order.email;
+            order.flavor;
+            order.cone;
+            order.toppings;
+        ];
+        const [result] = await pool.execute(sql, params);
+        console.log('Order saved with ID:', result.insertID);
+        res.render('Confirmation', {order});
+    } catch (err) {
+        console.error("Error saving order:", err);
+        res.status(500).send("Sorry, there was an error processing your order. Please try again.");
 
+    }
+});
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 })

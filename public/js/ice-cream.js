@@ -2,7 +2,7 @@ document.getElementById("form").onsubmit = () => {
     clearErrors();
     let isValid = true;
 
-    let name = document.getElementById("name").value.trim();
+    let name = document.getElementById("customer").value.trim();
     if(!name) {
         document.getElementById("err-name").style.display = "block";
         isValid = false;
